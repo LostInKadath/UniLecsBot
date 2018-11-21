@@ -4,9 +4,12 @@ import telebot
 from flask import Flask, request
 
 from constants import *
+from Task import Task
+
 
 bot = telebot.TeleBot(token)
 server = Flask(__name__)
+
 Main_mark_up = telebot.types.ReplyKeyboardMarkup(True, False)
 Main_mark_up.row('Список задач', 'Поиск')
 Main_mark_up.row('Получить задачу по сложности', 'Книги')
